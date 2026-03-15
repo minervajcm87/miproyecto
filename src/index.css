@@ -1,0 +1,300 @@
+/* =========================
+   RESET GLOBAL
+========================= */
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* =========================
+   VARIABLES
+========================= */
+
+:root {
+  --color--principal: #942EA3;
+  --color-secundario: green;
+  --color-link: crimson;
+  --color-menu: #333;
+  --color-title: gray;
+  --color-name: white;
+  --colo-link2: #4ea3ff;
+  --color-background: #e1bee7;
+  --color-dark-background: #343a40;
+}
+
+/* =========================
+   LAYOUT GENERAL
+========================= */
+
+.main-content {
+  width: 100%;
+  min-height: 100vh;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.projects-page {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1.5rem 2rem;
+  background-color: var(--color--principal);
+  color: var(--color-name);
+}
+
+.header-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-header__title {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.header-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-end;
+}
+
+.main-nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.main-nav a {
+  color: var(--color-name);
+  text-decoration: none;
+}
+
+.theme-switcher,
+.language-switcher {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+body {
+  background-color: white;
+  color: black;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+/* =========================
+   RELOJ
+========================= */
+
+.reloj {
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.reloj-hora {
+  font-weight: bold;
+}
+
+.reloj-fecha {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+/* =========================
+   ABOUT ME
+========================= */
+
+.about-me {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.about-me__image img {
+  border-radius: 50%;
+}
+
+/* =========================
+   HOBBIES
+========================= */
+
+.hobbies {
+  margin-bottom: 2rem;
+}
+
+.hobbies__gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background-color: #caa0cc;
+  padding: 1rem;
+  border-radius: 6px;
+  text-align: center;
+  border: 1px solid green;
+}
+
+/* =========================
+   SEMÁFORO
+========================= */
+
+.traffic-section {
+  margin: 2rem 0;
+}
+
+.traffic-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.traffic-light {
+  width: 110px;
+  background-color: #1f1f1f;
+  padding: 1rem;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.9rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+.light {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #4b4b4b;
+  opacity: 0.35;
+  transition: all 0.3s ease;
+}
+
+.active-red {
+  background-color: #ff2d2d;
+  opacity: 1;
+  box-shadow: 0 0 16px #ff2d2d;
+}
+
+.active-yellow {
+  background-color: #ffd429;
+  opacity: 1;
+  box-shadow: 0 0 16px #ffd429;
+}
+
+.active-green {
+  background-color: #20d65a;
+  opacity: 1;
+  box-shadow: 0 0 16px #20d65a;
+}
+
+/* =========================
+   CONTACTO
+========================= */
+
+.contact-section {
+  margin: 2rem 0;
+}
+
+.contact-section form {
+  display: flex;
+  gap: 1rem;
+}
+
+.contact-section input {
+  padding: 0.5rem;
+}
+
+.contact-section button {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.main-footer {
+  background-color: var(--color--principal);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* =========================
+   MODO OSCURO
+========================= */
+
+body.dark-mode {
+  background-color: var(--color-dark-background);
+  color: white;
+}
+
+body.dark-mode .main-header {
+  background-color: #222;
+}
+
+body.dark-mode .main-footer {
+  background-color: #222;
+}
+
+body.dark-mode .card {
+  background-color: #444;
+  border-color: #777;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  .about-me {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .traffic-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-right {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
