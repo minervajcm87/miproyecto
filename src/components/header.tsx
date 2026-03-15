@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 import { useEffect, useState } from "react"
 import Reloj from "./reloj"
 import LanguageDialog from "./LanguageDialog"
@@ -42,9 +42,9 @@ export default function Header() {
 
       <div className="header-right">
         <nav className="main-nav">
-          <Link to="/">{t.navInicio}</Link>
-          <Link to="/proyectos">{t.navProyectos}</Link>
-          <Link to="/contacto">{t.navContacto}</Link>
+          <NavLink to="/">{t.navInicio}</NavLink>
+          <NavLink to="/proyectos">{t.navProyectos}</NavLink>
+          <NavLink to="/contacto">{t.navContacto}</NavLink>
         </nav>
 
         <div className="header-actions">
